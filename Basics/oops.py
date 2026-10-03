@@ -33,8 +33,9 @@ Here, Student is a class and student1 is an object of the Student class.
 ATTRIBUTES
 
 Attributes are the variables that belong to an object or class.
-
 They represent the properties or characteristics of an object.
+
+Two Types: Class and Instance
 
 METHODS
 
@@ -65,3 +66,98 @@ print(student1.age)
 
 '''
 
+# class Factory():  #class
+#     a = 12        #attribute
+
+#     def hello(self):  #method     #Self stores the location of the object
+#         print("Hello how are you?")
+
+#     print("How are you and This is getting initialized.")
+
+# obj = Factory()     #OBJECT 
+
+# print(Factory().a)
+# Factory().hello()
+
+# print(obj.a)
+
+# class Factory():  #class
+           
+#     def __init__(self, material, zips, pockets):  #method
+#             print(self)
+#             self.material = material
+#             self.zips = zips
+#             self.pockets = pockets
+
+#     def show(self):
+#       print(f"Your object details are {self.material}, {self.zips} zips, {self.pockets} pockets.")
+
+# reebok = Factory("leather", 1, 4) 
+# campus = Factory("plastic", 1, 2)
+
+# # print(reebok.pockets)
+
+# reebok.show()
+# campus.show()
+
+# class Animal():
+
+#     name = 'lion'       #class attribute
+
+#     def __init__(self,age):
+#         self.age = age      #instance attribute
+
+#     def show(self):         #instance method
+#         print("hellooo!!!")
+
+#     @classmethod
+#     def hello(cls):     #class method - can call only class attributes
+#         print("Hello from class method.")
+
+#     @staticmethod
+#     def static():   #can call objects
+#         print("Hello from statiic method")
+
+
+# obj = Animal(12)
+
+# obj.static()
+
+'''
+4 PILLARS OF OOPs
+
+1. Encapsulation
+2. Polymorphism
+3. Abstraction
+4. Inheritance
+'''
+
+#Inheritance
+
+import math
+
+class Calculator:
+    def sum(self,a, b):
+        return (a+b)
+
+    def difference(self,a,b):
+        return (a-b)
+
+class AdvCalculator(Calculator):
+    def multiply(self,a,b):
+        return (a*b)
+
+    def divide(self,a,b):
+        return (a/b)
+
+class SciCalculator(AdvCalculator):
+    def mod(self,a,b):
+        return (a%b)
+
+    def power(self,a,b):
+        c = math.pow(a,b)
+        return (c)
+
+calc = AdvCalculator()
+
+print(calc.sum(3,5))
