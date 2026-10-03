@@ -134,30 +134,64 @@ print(student1.age)
 
 #Inheritance
 
-import math
+# import math
 
-class Calculator:
-    def sum(self,a, b):
-        return (a+b)
+# class Calculator: #PARENT CLASS
+#     def sum(self,a, b):
+#         return (a+b)
 
-    def difference(self,a,b):
-        return (a-b)
+#     def difference(self,a,b):
+#         return (a-b)
 
-class AdvCalculator(Calculator):
-    def multiply(self,a,b):
-        return (a*b)
+# class AdvCalculator(Calculator): #CHILD CLASS
+#     def multiply(self,a,b):
+#         return (a*b)
 
-    def divide(self,a,b):
-        return (a/b)
+#     def divide(self,a,b):
+#         return (a/b)
 
-class SciCalculator(AdvCalculator):
-    def mod(self,a,b):
-        return (a%b)
+# class SciCalculator(AdvCalculator):
+#     def mod(self,a,b):
+#         return (a%b)
 
-    def power(self,a,b):
-        c = math.pow(a,b)
-        return (c)
+#     def power(self,a,b):
+#         c = math.pow(a,b)
+#         return (c)
 
-calc = AdvCalculator()
+# calc = AdvCalculator()
 
-print(calc.sum(3,5))
+# print(calc.sum(3,5))
+
+
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def show(self):
+#         print(f"Your name is {self.name}.")
+
+# class Human(Animal):
+#     pass
+
+# animal1 = Animal("lion")
+# person1 = Human("Richeek")
+# person1.show()
+
+class Animal():
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):
+        print(f"Your name is {self.name}.")
+
+class Human(Animal):
+    def __init__(self, name, age):
+        super().__init__(name) #super keyword targets the parent class for attributes
+        self.age = age
+
+    def show(self):     #Method Overriding
+            print(f"Your name is {self.name} and age is {self.age}.")
+
+animal1 = Animal("lion")
+person1 = Human("Richeek",21)
+person1.show()
