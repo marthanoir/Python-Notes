@@ -158,16 +158,145 @@ kargs always contain **, the variable name can be changed.
 
 # DECORATORS USING *args & **kwargs
 
-def decorate(func):
-    def wrapper(*args, **kwargs):
-        print("The addition to your numbers are: ")
-        func(*args, **kwargs)
-        print("Thank you.")
-    return wrapper
+# def decorate(func):
+#     def wrapper(*args, **kwargs):
+#         print("The addition to your numbers are: ")
+#         func(*args, **kwargs)
+#         print("Thank you.")
+#     return wrapper
 
-@decorate
-def addition(a,b,c,d):
-    print(f"your total is {a+b+c+d} ")
+# @decorate
+# def addition(a,b,c,d):
+#     print(f"your total is {a+b+c+d} ")
 
-addition(12,65,56,67)
+# addition(12,65,56,67)
+
+'''
+Comprehensions -> It is used to create List, dictionary and sets but we dont use multiple lines of codes for 
+loops and if-else statement.
+'''
+
+# Eg: Taking elements in a LIST.
+
+#NORMAL WAY
+# a = []
+# for i in range(1,21):
+#     if i%2 == 0:
+#         a.append(i)
+
+# print(a)
+
+#USING COMPREHENSION
+
+# a = [i for i in range(1,21) if i%2==0]
+
+# print(a)
+
+#DICTIONARIES
+
+# a = {i : i**2 for i in range(1,10)}
+# print (a)
+
+#SETS
+
+# a = {i*i for i in range(10) if i%2==0}
+# print (a)
+
+'''
+Lambda function: A lambda function is an anonymous inline function defined using the lambda keyword. 
+It's often used for short, simple functions that are only used only once or temporarily. 
+You can have multiple arguments, but there will only be one expression.
+'''
+
+# Using function
+# def addition(a,b):
+#     print(a+b)
+
+# addition(12,13)
+# print(addition)
+
+# Using Lambda
+
+# addition = lambda a,b : a+b
+# addition = lambda a: "even" if a%2 == 0 else "odd"
+
+# print(addition(12))
+
+'''
+MAP()
+
+The map() function is used to apply a function to every item in an iterable.
+
+FILTER()
+
+The filter() function is used to filter elements from an iterable based on a condition.
+
+'''
+
+# MAP
+
+#  result = map(lambda function: variable of list)
+
+# a = [1,2,3,4,5]
+# result = map(lambda x : x*2,a)
+
+# print(list(result))
+
+# FILTER
+
+# def even(x):
+#     if x%2 ==0:
+#         return True
+#     else:
+#         return False
+    
+# a =[1,2,3,4,5,6]
+
+# result = filter(even, a )
+# print(list(result))
+
+# a =[1,2,3,4,5,6]
+
+# result = filter(lambda x : True if x%2==0 else False, a )
+# print(list(result))
+
+'''
+MODULES AND PACKAGES
+
+MODULES
+
+A module is a Python file containing Python code such as functions, classes, and variables.
+
+Modules help us organise code into separate files and make the code reusable.
+
+A module can be imported using the import keyword.
+
+Example:
+
+import math
+
+print(math.sqrt(25))
+
+PACKAGES
+
+A package is a collection of modules organised in a directory.
+
+Packages help in organising large Python projects into smaller and manageable parts.
+
+A package generally contains an **init**.py file.
+
+Example structure:
+
+my_package/
+**init**.py
+module1.py
+module2.py
+
+We can import modules from a package using:
+
+from my_package import module1
+
+A module is a file that can be accessed by import keyword.. 
+A packages is a folder containing multiple files of module.
+'''
 
