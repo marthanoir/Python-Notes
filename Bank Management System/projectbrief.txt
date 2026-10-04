@@ -1,0 +1,70 @@
+FEATURES OF THE PROJECT
+
+1. Bank Account
+2. Deposit Money
+3. Withdraw Money
+4. Details
+5. Update Details
+6. Delete Account
+
+WORKFLOW
+
+The main purpose of this project is to store and manage customer and account information using a JSON file.
+
+Basic Working Flow
+
+JSON File
+
+I will create a JSON file that will act as the database for my project.
+
+It will contain the dummy data of the bank customers and their account details.
+
+Taking User Input
+
+Whenever the user performs an operation, such as checking an account, updating information, 
+depositing money, withdrawing money, or making any other change, the program will take the 
+required input from the user.
+
+Reading Data from JSON
+
+The program will read the required data from the JSON file.
+
+The data will be loaded into Python so that I can work with it and make the required changes.
+
+Performing Operations
+
+After getting the data, the program will perform the required operation.
+
+For example:
+
+Updating customer information
+Depositing money
+Withdrawing money
+Changing account details
+Adding or deleting customer information
+
+All the changes will initially be made to the data loaded into Python.
+
+Updating the JSON File
+
+After the operation is completed, the modified data will be written back to the JSON file.
+
+This will ensure that all the changes made by the user are saved permanently.
+
+Basic Flow
+
+JSON File
+↓
+Read/Load Data
+↓
+Take User Input
+↓
+Perform Required Operation
+↓
+Update Data
+↓
+Write Data Back to JSON File
+
+In short, the JSON file will act as the storage for the Bank Management System. 
+The program will read the data from the JSON file, perform the required operations based on the user's 
+input, and then update the JSON file with the new data.
